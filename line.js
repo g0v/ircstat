@@ -33,7 +33,8 @@ var svg2 = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.json("g0v-count.json", function(error, data) {
-  var valve = data[0];
+  var valve = data.by_date[0];
+  data = data.by_date;
   color.domain(data[0][1]);
   data.splice(0,1);
   data.forEach(function(d) {
