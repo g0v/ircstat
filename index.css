@@ -1,6 +1,139 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
 body {
-  font: 10px sans-serif;
+  text-align: center;
+  font: 13px sans-serif;
   shape-rendering: crispEdges; }
+
+.title {
+  margin-top: 20px;
+  font-size: 96px; }
+  .title .zero {
+    color: red; }
+  .title .icon-bar-chart {
+    color: #009900; }
+  .title .icon-picture {
+    color: #009900; }
+
+.desc {
+  margin: 10px; }
+
+.ideas {
+  font-size: 96px;
+  margin: 100px 0 0;
+  position: relative;
+  width: 100%;
+  height: 450px; }
+  .ideas .idea {
+    margin: 0;
+    top: 128px;
+    left: 50%;
+    position: absolute;
+    color: #002255; }
+    .ideas .idea:nth-child(1) {
+      text-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+      margin: 0 0 0 -48px;
+      color: #aa0000; }
+    .ideas .idea:nth-child(2) {
+      text-shadow: 0 -6px 6px rgba(0, 0, 0, 0.3);
+      margin: -160px 0 0 -48px; }
+    .ideas .idea:nth-child(3) {
+      text-shadow: -6px 4px 6px rgba(0, 0, 0, 0.3);
+      margin: 86px 0 0 -234px; }
+    .ideas .idea:nth-child(4) {
+      text-shadow: 6px 4px 6px rgba(0, 0, 0, 0.3);
+      margin: 86px 0 0 140px; }
+  .ideas .desc {
+    font-size: 15px; }
+
+.stats {
+  font-size: 64px;
+  margin-bottom: 50px; }
+  .stats .stat {
+    color: #333333;
+    text-shadow: 0 4px 3px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin: 0 10px; }
+    .stats .stat .desc {
+      font-size: 15px; }
+
+.fbbar, .ircbar {
+  width: 300px;
+  height: 150px;
+  border-bottom: 1px solid #333333;
+  display: inline-block;
+  position: relative;
+  margin: 10px 20px 50px; }
+  .fbbar .desc, .ircbar .desc {
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    width: 100%; }
+  .fbbar .mark, .ircbar .mark {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    border-bottom: 1px solid #999999; }
+  .fbbar .bar, .ircbar .bar {
+    position: absolute;
+    left: 0px;
+    bottom: 2px;
+    width: 20px;
+    height: 50px;
+    background: #2288cc; }
+    .fbbar .bar:nth-of-type(1), .ircbar .bar:nth-of-type(1) {
+      height: 10px;
+      left: 10px; }
+    .fbbar .bar:nth-of-type(2), .ircbar .bar:nth-of-type(2) {
+      height: 15px;
+      left: 40px; }
+    .fbbar .bar:nth-of-type(3), .ircbar .bar:nth-of-type(3) {
+      height: 30px;
+      left: 70px; }
+    .fbbar .bar:nth-of-type(4), .ircbar .bar:nth-of-type(4) {
+      height: 50px;
+      left: 100px; }
+    .fbbar .bar:nth-of-type(5), .ircbar .bar:nth-of-type(5) {
+      height: 90px;
+      left: 130px; }
+    .fbbar .bar:nth-of-type(6), .ircbar .bar:nth-of-type(6) {
+      height: 110px;
+      left: 160px; }
+    .fbbar .bar:nth-of-type(7), .ircbar .bar:nth-of-type(7) {
+      height: 130px;
+      left: 190px; }
+    .fbbar .bar:nth-of-type(8), .ircbar .bar:nth-of-type(8) {
+      height: 140px;
+      left: 220px; }
+    .fbbar .bar:nth-of-type(9), .ircbar .bar:nth-of-type(9) {
+      height: 145px;
+      left: 250px; }
+
+.ircbar .bar {
+  background: #cc7722; }
+
+.irc-activity {
+  margin: 30px 0; }
+  .irc-activity .block {
+    display: inline-block;
+    width: 120px;
+    height: 140px;
+    margin: 10px;
+    font-size: 32px;
+    color: white; }
+    .irc-activity .block .iblock {
+      line-height: 120px;
+      height: 120px;
+      background: #999999;
+      border-radius: 15px;
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); }
+    .irc-activity .block .desc {
+      font-size: 15px;
+      color: #225522; }
 
 .day {
   fill: white;

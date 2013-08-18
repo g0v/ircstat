@@ -3,10 +3,112 @@ html
   head
     meta(charset="utf8")
     link(rel="stylesheet",type="text/css",href="index.css")
+    link(rel="stylesheet",type="text/css",href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css")
     script(src="jquery-1.10.2.min.js")
     script(type="text/javascript",src="d3.v3.min.js")
     script(type="text/javascript",src="index.js")
   body
+    .title
+      i.icon-bar-chart
+      |  G
+      span.zero 0
+      | ViS 
+      i.icon-picture
+    .desc in mockup stage
+    .desc 報告學長，沒有畫面，再強調一次，完全沒有畫面
+    .ideas
+      .idea
+        i.icon-wrench
+        .desc 改造政府
+      .idea
+        i.icon-group
+        .desc 去中心化
+      .idea
+        i.icon-github
+        .desc 開放源碼
+      .idea
+        i.icon-unlock-alt
+        .desc 資料透明
+    .stats
+      .stat
+        i.icon-calendar
+        .desc 經過205天
+      .stat
+        i.icon-food
+        .desc 五次黑客松
+      .stat
+        i.icon-comments
+        .desc 300人參與
+      .stat
+        i.icon-book
+        .desc 93個專案
+      .stat
+        i.icon-code-fork
+        .desc 128次分支
+      .stat
+        i.icon-thumbs-up
+        .desc 八千個讚
+      .stat
+        i.icon-bullhorn
+        .desc 12次媒體報導
+      .stat
+        i.icon-camera
+        .desc 1034張照片
+    .fbbar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .desc 臉書粉絲團人數成長趨勢 (一月至九月)
+      .mark 9k
+
+    .ircbar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .bar
+      .desc 聊天室同時線上人數 (一月至九月)
+      .mark 2k
+
+    .irc-activity
+      .block
+        .iblock 發言數
+        .desc 天別
+      .block
+        .iblock(style="background:#393") 924
+        .desc 週一
+      .block
+        .iblock(style="background:#3a3") 1232
+        .desc 週二
+      .block
+        .iblock(style="background:#3c3") 1501
+        .desc 週三
+      .block
+        .iblock(style="background:#3f3") 1720
+        .desc 週四
+          i.icon-fire(style="color:#f00")
+      .block
+        .iblock(style="background:#3b3") 1320
+        .desc 週五
+      .block
+        .iblock(style="background:#373") 877
+        .desc 週六
+      .block
+        .iblock(style="background:#353") 405
+        .desc 週日
+    hr
+    | 我是分隔線
+    hr
     //- script(type="text/javascript",src="calendar.js")
     script(type="text/javascript",src="line.js")
     script(type="text/javascript",src="bubble.js")
