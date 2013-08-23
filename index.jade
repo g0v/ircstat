@@ -132,8 +132,9 @@ html
       | {{ prjsAllcontrib / contributorCount | number }}
     h3 貢獻者
     .tags
-      .tag(ng-repeat="(k,v) in contributors | orderBy:'v'")
-        | {{ k }}: {{ v }}
+      .tag(ng-repeat="cont in contribArray | orderBy:'-total'")
+        | {{ cont.name }}: {{ cont.total }}
+        .tag(ng-repeat="p in cont.projects") {{ p }}
 
     hr
     | 我是分隔線

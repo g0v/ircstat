@@ -195,6 +195,9 @@ body {
   border-radius: 5px;
   background: #eeeeee;
   margin: 3px 3px; }
+  .tags .tag .tag {
+    color: white;
+    background: #777777; }
 
 a {
   color: #3366cc;

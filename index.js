@@ -13,53 +13,63 @@ g0visController = function($scope, $http){
       client_id: 'ab2376373fe2da1ccb17',
       client_secret: '6560c859d46e79f00dade30999ee62ca5052437d'
     }
-  }).success(function(d){
-    var i$, len$, prj, results$ = [];
+  }).success(function(prjs){
+    var i$, len$, _prj, results$ = [];
     $scope.contributors = {};
-    $scope.prjs = d;
-    $scope.forks = sum(d, 'forks_count');
-    $scope.issues = sum(d, 'open_issues');
-    $scope.watchers = sum(d, 'watchers');
+    $scope.contribArray = [];
+    $scope.prjs = prjs;
+    $scope.forks = sum(prjs, 'forks_count');
+    $scope.issues = sum(prjs, 'open_issues');
+    $scope.watchers = sum(prjs, 'watchers');
     $scope.contributorCount = 0;
     $scope.prjsAllcontrib = 0;
     $scope.commits = 0;
-    for (i$ = 0, len$ = d.length; i$ < len$; ++i$) {
-      prj = d[i$];
+    for (i$ = 0, len$ = prjs.length; i$ < len$; ++i$) {
+      _prj = prjs[i$];
+      results$.push(fn$(_prj));
+    }
+    return results$;
+    function fn$(prj){
       $http.get("https://api.github.com/repos/g0v/" + prj.name + "/stats/commit_activity", {
         params: {
           client_id: 'ab2376373fe2da1ccb17',
           client_secret: '6560c859d46e79f00dade30999ee62ca5052437d'
         }
-      }).success(fn$);
-      results$.push($http.get(prj.collaborators_url.replace(/{.+}/, ""), {
+      }).success(function(d){
+        var commits, i$, len$, contrib;
+        commits = 0;
+        for (i$ = 0, len$ = d.length; i$ < len$; ++i$) {
+          contrib = d[i$];
+          commits += contrib.total;
+        }
+        prj.commits = commits;
+        return $scope.commits += commits;
+      });
+      return $http.get(prj.contributors_url.replace(/{.+}/, ""), {
         params: {
           client_id: 'ab2376373fe2da1ccb17',
           client_secret: '6560c859d46e79f00dade30999ee62ca5052437d'
         }
-      }).success(fn1$));
-    }
-    return results$;
-    function fn$(d){
-      var commits, i$, len$, contrib;
-      commits = 0;
-      for (i$ = 0, len$ = d.length; i$ < len$; ++i$) {
-        contrib = d[i$];
-        commits += contrib.total;
-      }
-      prj.commits = commits;
-      return $scope.commits += commits;
-    }
-    function fn1$(d){
-      var i$, len$, user, that, results$ = [];
-      for (i$ = 0, len$ = d.length; i$ < len$; ++i$) {
-        user = d[i$];
-        $scope.contributors[user.login] = (that = $scope.contributors[user.login]) ? that + 1 : 1;
-        if ($scope.contributors[user.login] === 1) {
-          $scope.contributorCount += 1;
+      }).success(function(d){
+        var i$, len$, user, v, results$ = [];
+        for (i$ = 0, len$ = d.length; i$ < len$; ++i$) {
+          user = d[i$];
+          if (!(user.login in $scope.contributors)) {
+            v = {
+              name: user.login,
+              total: 0,
+              projects: []
+            };
+            $scope.contributors[user.login] = v;
+            $scope.contribArray.push(v);
+            $scope.contributorCount += 1;
+          }
+          $scope.contributors[user.login].total += 1;
+          $scope.contributors[user.login].projects.push(prj.name);
+          results$.push($scope.prjsAllcontrib += 1);
         }
-        results$.push($scope.prjsAllcontrib += 1);
-      }
-      return results$;
+        return results$;
+      });
     }
   });
 };
