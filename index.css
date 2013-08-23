@@ -188,16 +188,27 @@ body {
   stroke: steelblue;
   stroke-width: 2px; }
 
-.tags .tag {
+.tags .tag, .cont .tag {
   display: inline-block;
   padding: 3px;
   border: 1px solid #cccccc;
   border-radius: 5px;
   background: #eeeeee;
   margin: 3px 3px; }
-  .tags .tag .tag {
+
+.conts .cont {
+  display: block;
+  width: 60%;
+  margin: 15px auto;
+  padding: 10px 0; }
+  .conts .cont .tag {
     color: white;
-    background: #777777; }
+    background: #997777; }
+  .conts .cont:nth-child(2n+1) {
+    background: #eeeeee; }
+    .conts .cont:nth-child(2n+1) .tag {
+      color: white;
+      background: #777799; }
 
 a {
   color: #3366cc;

@@ -131,8 +131,8 @@ html
     h3 每位貢獻者平均參與的專案數
       | {{ prjsAllcontrib / contributorCount | number }}
     h3 貢獻者
-    .tags
-      .tag(ng-repeat="cont in contribArray | orderBy:'-total'")
+    .conts
+      .cont(ng-repeat="cont in contribArray | orderBy:'-total'")
         | {{ cont.name }}: {{ cont.total }}
         .tag(ng-repeat="p in cont.projects") {{ p }}
 

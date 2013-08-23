@@ -177,17 +177,29 @@ body
   stroke: steelblue
   stroke-width: 2px
 
-.tags
-  .tag
-    display: inline-block
-    padding: 3px
-    border: 1px solid #ccc
-    border-radius: 5px
-    background: #eee
-    margin: 3px 3px
+.tags .tag, .cont .tag
+  display: inline-block
+  padding: 3px
+  border: 1px solid #ccc
+  border-radius: 5px
+  background: #eee
+  margin: 3px 3px
+
+.conts
+  .cont
+    display: block
+    width: 60%
+    margin: 15px auto
+    padding: 10px 0
     .tag
       color: #fff
-      background: #777
+      background: #977
+    &:nth-child(2n+1)
+      background: #eee
+      .tag
+        color: #fff
+        background: #779
+
 a
   color: #36c
   text-decoration: none
