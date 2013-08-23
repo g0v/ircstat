@@ -187,3 +187,15 @@ body {
   fill: none;
   stroke: steelblue;
   stroke-width: 2px; }
+
+.tags .tag {
+  display: inline-block;
+  padding: 3px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background: #eeeeee;
+  margin: 3px 3px; }
+
+a {
+  color: #3366cc;
+  text-decoration: none; }

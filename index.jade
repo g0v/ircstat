@@ -6,8 +6,9 @@ html
     link(rel="stylesheet",type="text/css",href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css")
     script(src="jquery-1.10.2.min.js")
     script(type="text/javascript",src="d3.v3.min.js")
+    script(type="text/javascript",src="/js/angular.js")
     script(type="text/javascript",src="index.js")
-  body
+  body(ng-app="g0vis", ng-controller="g0visController")
     .title
       i.icon-bar-chart
       |  G
@@ -107,6 +108,33 @@ html
       .block
         .iblock(style="background:#353") 405
         .desc 週日
+    hr
+    | 我是分隔線
+    hr
+
+    h3 專案數
+    | {{ prjs.length }}
+    h3 總送交數
+    | {{ commits }}
+    h3 總分支數
+    | {{ forks }}
+    h3 待解問題
+    | {{ issues }}
+    h3 關注者
+    | {{ watchers }}
+    h3 專案列表
+    .tags
+      .tag(ng-repeat="prj in prjs")
+        a(href="{{prj.html_url}}") {{prj.name}}
+    h3 貢獻者總數
+      | {{ contributorCount }}
+    h3 每位貢獻者平均參與的專案數
+      | {{ prjsAllcontrib / contributorCount | number }}
+    h3 貢獻者
+    .tags
+      .tag(ng-repeat="(k,v) in contributors | orderBy:'v'")
+        | {{ k }}: {{ v }}
+
     hr
     | 我是分隔線
     hr
