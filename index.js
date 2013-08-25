@@ -1,5 +1,10 @@
 var sum, g0visController;
-angular.module('g0vis', []);
+angular.module('g0vis', []).config([
+  '$httpProvider', function($httpProvider){
+    var ref$, ref1$;
+    return ref1$ = (ref$ = $httpProvider.defaults.headers.common)['X-Requested-With'], delete ref$['X-Requested-With'], ref1$;
+  }
+]);
 sum = function(v, k){
   return v.map(function(it){
     return it[k];
@@ -8,6 +13,9 @@ sum = function(v, k){
   }), 0);
 };
 g0visController = function($scope, $http){
+  $http.get('http://kcwu.csie.org/~kcwu/ircstat/g0v-count.json').success(function(data){
+    return console.log(data);
+  });
   return $http.get('https://api.github.com/orgs/g0v/repos', {
     params: {
       client_id: 'ab2376373fe2da1ccb17',

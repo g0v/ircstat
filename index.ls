@@ -1,8 +1,13 @@
 angular.module \g0vis, []
+.config [\$httpProvider, ($httpProvider) ->
+  delete $httpProvider.defaults.headers.common[ \X-Requested-With ]
+]
 
 sum = (v,k) -> v.map (-> it[k]) .reduce (+), 0
 g0visController = ($scope, $http) ->
-  
+  $http.get \http://kcwu.csie.org/~kcwu/ircstat/g0v-count.json
+  .success (data) ->
+    console.log data
   $http.get \https://api.github.com/orgs/g0v/repos,
     params: 
       client_id: \ab2376373fe2da1ccb17

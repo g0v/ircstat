@@ -213,3 +213,19 @@ body {
 a {
   color: #3366cc;
   text-decoration: none; }
+
+.featured {
+  text-align: center; }
+  .featured .prj {
+    display: inline-block;
+    width: 150px;
+    height: 250px;
+    overflow: hidden;
+    clip: rect(0 150 250 0);
+    border-radius: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px; }
+    .featured .prj img {
+      height: 250px;
+      margin-left: -50px; }
