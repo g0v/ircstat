@@ -25,7 +25,7 @@ body {
   left: 50%;
   width: 1000px;
   margin-left: -500px;
-  background: white;
+  background: #fff3e3;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); }
 
 .banner {
@@ -41,6 +41,9 @@ body {
 
 .timeline {
   margin: 20px; }
+  .timeline iframe {
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
 
 .title {
   margin-top: 20px;
