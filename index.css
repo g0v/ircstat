@@ -40,7 +40,7 @@ body {
     font-size: 16px; }
 
 .timeline {
-  margin: 50px 20px 20px; }
+  margin: 30px 20px 20px; }
   .timeline iframe {
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -55,6 +55,13 @@ body {
     color: #009900; }
   .title .icon-picture {
     color: #009900; }
+
+.subtitle {
+  text-align: left;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin: 5px 20px;
+  font-family: tahoma; }
 
 .desc {
   margin: 10px; }
@@ -71,25 +78,29 @@ body {
     left: 50%;
     position: absolute;
     color: #002255; }
+    .ideas .idea .desc {
+      width: 360px; }
+      .ideas .idea .desc:nth-of-type(2) {
+        color: black; }
     .ideas .idea:nth-child(1) {
       text-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
-      margin: 0 0 0 -48px;
+      margin: 0 0 0 -180px;
       color: #aa0000; }
     .ideas .idea:nth-child(2) {
       text-shadow: 0 -6px 6px rgba(0, 0, 0, 0.3);
-      margin: -160px 0 0 -48px; }
+      margin: -200px 0 0 -180px; }
     .ideas .idea:nth-child(3) {
       text-shadow: -6px 4px 6px rgba(0, 0, 0, 0.3);
-      margin: 86px 0 0 -234px; }
+      margin: 86px 0 0 -386px; }
     .ideas .idea:nth-child(4) {
       text-shadow: 6px 4px 6px rgba(0, 0, 0, 0.3);
-      margin: 86px 0 0 140px; }
+      margin: 86px 0 0 28px; }
   .ideas .desc {
     font-size: 15px; }
 
 .stats {
   font-size: 64px;
-  margin-bottom: 20px; }
+  margin: 10px 0 20px; }
   .stats .stat {
     color: #553333;
     text-shadow: 0 4px 3px rgba(0, 0, 0, 0.3);
