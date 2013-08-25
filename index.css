@@ -40,10 +40,11 @@ body {
     font-size: 16px; }
 
 .timeline {
-  margin: 20px; }
+  margin: 50px 20px 20px; }
   .timeline iframe {
     background: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 9px; }
 
 .title {
   margin-top: 20px;
@@ -88,14 +89,16 @@ body {
 
 .stats {
   font-size: 64px;
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
   .stats .stat {
-    color: #333333;
+    color: #553333;
     text-shadow: 0 4px 3px rgba(0, 0, 0, 0.3);
     display: inline-block;
     margin: 0 10px; }
     .stats .stat .desc {
       font-size: 15px; }
+    .stats .stat:nth-child(2n) {
+      color: #333355; }
 
 .fbbar, .ircbar {
   width: 300px;

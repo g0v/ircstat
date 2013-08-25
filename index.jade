@@ -12,28 +12,51 @@ html
     #tie &nbsp;
     #container
       .banner &nbsp;
-        .desc: 已有 1325 個人立志成為沒有人
+        .desc: 已有 9550 個人立志成為沒有人
       div(style="background:#000;color:#fff;margin:0;padding:10px")
         .desc in mockup stage - 
           a(href="https://hackpad.com/38KFeiT1Qrm") Discussion Page
         .desc 報告學長，沒有畫面，再強調一次，完全沒有畫面
       .timeline
-        iframe(src="http://embed.verite.co/timeline/?source=0AuVVq3srA7dPdFQtc3VQOUg0U1FZaVRYX09VeUMyU2c&font=Bevan-PotanoSans&maptype=toner&lang=zh-tw&height=650",width="100%",height="650",frameborder="0")
         .stats
           .stat
             i.icon-calendar
-            .desc 經過268天
-        .desc 以下用橫式 timeline 呈現
-        div 2012/12/01 第1天 第零次黑客松
-        div 2013/01/13 第44天 WebConf 2013 talk
-        div 2013/01/27 第58天 第一次黑客松
-        div 2013/03/23 第113天 第二次黑客松
-        div 2013/04/20 第141天 OSDC 2013 talk
-        div 2013/04/28 第149天 ICOS 2013 talk
-        div 2013/05/23 第174天 pre-hackathon @ handlino
-        div 2013/06/08 第190天 第三次黑客松
-        div 2013/08/03 第246天 COSCUP 2013 session
-        div 2013/08/10 第253天 第四次黑客松
+            .desc 經過{{elapsed_day}}天
+          .stat
+            i.icon-food
+            .desc 五次黑客松
+          .stat
+            i.icon-comments
+            .desc {{watchers}}人參與
+          .stat
+            i.icon-book
+            .desc {{prjs.length}}個專案
+          .stat
+            i.icon-code-fork
+            .desc {{forks}}次分支
+          .stat
+            i.icon-edit
+            .desc {{commits}}次送交
+          .stat
+            i.icon-bullhorn
+            .desc 六次媒體報導
+          .stat
+            i.icon-camera
+            .desc 1049張照片
+        .desc 那麼接下來是零時政府的歷程
+        iframe(src="http://embed.verite.co/timeline/?source=0AuVVq3srA7dPdFQtc3VQOUg0U1FZaVRYX09VeUMyU2c&font=Bevan-PotanoSans&maptype=toner&lang=zh-tw&height=650",width="100%",height="650",frameborder="0")
+        //- 備忘用
+           2012/12/01 第1天 第零次黑客松
+           2013/01/13 第44天 WebConf 2013 talk
+           2013/01/27 第58天 第一次黑客松
+           2013/03/23 第113天 第二次黑客松
+           2013/04/20 第140天 OSDC 2013 talk
+           2013/04/28 第148天 ICOS 2013 talk
+           2013/05/23 第174天 pre-hackathon @ handlino
+           2013/06/03 第184天 post-pre-hackathon @ handlino
+           2013/06/08 第189天 第三次黑客松
+           2013/08/03 第246天 COSCUP 2013 session
+           2013/08/10 第253天 第四次黑客松
       .featured
         .prj: img(src="img/moedict.png",style="height:250px;margin-left:-50px")
         .prj: img(src="img/listening.png",style="height:250px;margin-left:-50px")
@@ -52,31 +75,7 @@ html
         .idea
           i.icon-unlock-alt
           .desc 資料透明
-      .stats
-        .stat
-          i.icon-calendar
-          .desc 經過205天
-        .stat
-          i.icon-food
-          .desc 五次黑客松
-        .stat
-          i.icon-comments
-          .desc 300人參與
-        .stat
-          i.icon-book
-          .desc 93個專案
-        .stat
-          i.icon-code-fork
-          .desc 128次分支
-        .stat
-          i.icon-thumbs-up
-          .desc 八千個讚
-        .stat
-          i.icon-bullhorn
-          .desc 12次媒體報導
-        .stat
-          i.icon-camera
-          .desc 1034張照片
+
       .fbbar
         .bar
         .bar

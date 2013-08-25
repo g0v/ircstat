@@ -13,6 +13,7 @@ sum = function(v, k){
   }), 0);
 };
 g0visController = function($scope, $http){
+  $scope.elapsed_day = parseInt((new Date().getTime() - new Date(2012, 12, 1).getTime()) / 86400000);
   $http.get('http://kcwu.csie.org/~kcwu/ircstat/g0v-count.json').success(function(data){
     return console.log(data);
   });
