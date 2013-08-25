@@ -7,8 +7,8 @@ var bubble = d3.layout.pack()
     .size([diameter, diameter])
     .padding(1.5);
 
-d3.select("body").append("div").text("發言量圖");
-var svg = d3.select("body").append("svg")
+d3.select("#container").append("div").text("發言量圖");
+var svg = d3.select("#container").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
     .attr("class", "bubble");
@@ -25,9 +25,9 @@ d3.csv("active.csv", function(error, root) {
 
   node.append("circle")
       .attr("r", function(d) { return d.r; })
-      .style("fill", "none")
-      .style("stroke-width", function(d) { return parseInt(d.r/4); })
-      .style("stroke", function(d) { return d.className?color(d.className):"none"; });
+ /*     .style("fill", "none")
+      .style("stroke-width", function(d) { return parseInt(d.r/4); })*/
+      .style("fill", function(d) { return d.className?color(d.className):"none"; });
 
   node.append("text")
       .attr("dy", ".3em")

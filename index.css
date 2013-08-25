@@ -7,7 +7,37 @@ html, body {
 body {
   text-align: center;
   font: 13px sans-serif;
-  shape-rendering: crispEdges; }
+  shape-rendering: crispEdges;
+  background: url(img/tweed.png); }
+
+#tie {
+  position: absolute;
+  top: 54px;
+  left: 0;
+  background: rgba(205, 193, 177, 0.5);
+  height: 126px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1000px;
+  margin-left: -500px;
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); }
+
+.banner {
+  width: 1000px;
+  height: 273px;
+  background: url(img/banner.png) no-repeat center center;
+  margin: 0;
+  padding: 0; }
+  .banner .desc {
+    text-align: center;
+    margin-top: 230px;
+    font-size: 16px; }
 
 .title {
   margin-top: 20px;
