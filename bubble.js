@@ -25,7 +25,9 @@ d3.csv("active.csv", function(error, root) {
 
   node.append("circle")
       .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return d.className?color(d.className):"none"; });
+      .style("fill", "none")
+      .style("stroke-width", function(d) { return parseInt(d.r/4); })
+      .style("stroke", function(d) { return d.className?color(d.className):"none"; });
 
   node.append("text")
       .attr("dy", ".3em")
